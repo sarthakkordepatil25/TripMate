@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --midnight: #101B2D;
+    --sand: #F2E8D8;
+    --terracotta: #C66B4E;
+    --sunset: #E9A45B;
+    --forest: #314C42;
+    --ivory: #FFFDF7;
+    --charcoal: #242424;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #FFFDF7;
+    background-color: #101B2D;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* =========================================================================
+   ROUTRANG-STYLE TACTILE PAPER GRAIN OVERLAY
+   ========================================================================= */
+.paper-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.055;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .2 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* =========================================================================
+   GLASSMORPHISM & EDITORIAL SURFACES
+   ========================================================================= */
+.glass-nav-luxury {
+  background: rgba(16, 27, 45, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(242, 232, 216, 0.12);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.45);
+}
+
+.glass-card-luxury {
+  background: rgba(16, 27, 45, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242, 232, 216, 0.14);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.55);
+}
+
+.glass-card-light {
+  background: rgba(255, 253, 247, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(242, 232, 216, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.25);
+  color: #101B2D;
+}
+
+.glass-panel-warm {
+  background: rgba(242, 232, 216, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(198, 107, 78, 0.2);
+  color: #101B2D;
+}
+
+/* Editorial eyebrow tag */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C66B4E;
+}
+
+/* Numbers font class */
+.font-num {
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-feature-settings: 'tnum' on, 'lnum' on;
+}
+
+/* Luxury button */
+.btn-luxury-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 9999px;
+  background-color: #C66B4E;
+  color: #FFFDF7;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 10px 25px -8px rgba(198, 107, 78, 0.5);
+  border: 1px solid rgba(255, 253, 247, 0.15);
+}
+
+.btn-luxury-primary:hover {
+  transform: translateY(-2px);
+  background-color: #B55A3D;
+  box-shadow: 0 16px 30px -10px rgba(198, 107, 78, 0.7);
+}
+
+.btn-luxury-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 9999px;
+  background: rgba(255, 253, 247, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #FFFDF7;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  border: 1.5px solid rgba(242, 232, 216, 0.28);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.btn-luxury-outline:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 253, 247, 0.18);
+  border-color: rgba(242, 232, 216, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1320;
+}
+::-webkit-scrollbar-thumb {
+  background: #314C42;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C66B4E;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
